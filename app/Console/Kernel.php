@@ -2,40 +2,28 @@
 
 namespace App\Console;
 
-use Illuminate\Console\Scheduling\Schedule;
+use App\Helpers\ModuleHelpers;
+use App\Helpers\PathHelpers;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\File;
 
 class Kernel extends ConsoleKernel
 {
-    /**
-     * The Artisan commands provided by your application.
-     *
-     * @var array
-     */
-    protected $commands = [
-        //
-    ];
+	protected function commands(): void
+	{
+		$this->load(app_path('Console/Commands'));
 
-    /**
-     * Define the application's command schedule.
-     *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
-     * @return void
-     */
-    protected function schedule(Schedule $schedule)
-    {
-        // $schedule->command('inspire')->hourly();
-    }
+		$this->loadIndividualModuleMigrations();
+	}
 
-    /**
-     * Register the commands for the application.
-     *
-     * @return void
-     */
-    protected function commands()
-    {
-        $this->load(__DIR__.'/Commands');
+	private function loadIndividualModuleMigrations(): void
+	{
+		foreach (ModuleHelpers::getModules() as $module) {
+			$moduleCommandPath = PathHelpers::modulePath("$module->name\\Commands");
 
-        require base_path('routes/console.php');
-    }
+			if (File::exists($moduleCommandPath)) {
+			    $this->load($moduleCommandPath);
+			}
+		}
+	}
 }

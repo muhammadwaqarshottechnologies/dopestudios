@@ -30,6 +30,7 @@ class RouteServiceProvider extends ServiceProvider
 	private function loadModuleRoutes(): void
 	{
 		foreach (ModuleHelpers::getModules() as $module) {
+			PathHelpers::modulePath("\\/\\/$module->name\\/Routes/\\routes.php\\/");
 			$moduleRoutesFile = PathHelpers::modulePath("$module->name\\Routes\\routes.php");
 
 			if (File::exists($moduleRoutesFile)) {

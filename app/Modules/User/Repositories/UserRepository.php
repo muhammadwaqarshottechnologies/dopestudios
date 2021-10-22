@@ -2,24 +2,44 @@
 
 namespace App\Modules\User\Repositories;
 
+use App\BaseClasses\BaseRepository;
 use App\Modules\User\DTOs\CreateUserDTO;
 use App\Modules\User\Models\User;
-use App\BaseClasses\BaseRepository;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\Eloquent\Collection;
 
 class UserRepository extends BaseRepository
 {
-	public function getUser(string | int $user): User
+	/**
+	 * @return Collection
+	 */
+	public function getUserList(): Collection
 	{
-		$user = User::active()->{is_string($user) ? 'whereUsername' : 'whereUserId'}($user)->find();
+		$query = User::whereHas('t', static function ($q) {
+		    $q->where('a', '=', 'b')->orWhere('c', '=', 'd');
+		})->where(static function ($q) {
+		    $q->where('a', '=', 'b')->orWhere('c', '=', 'd');
+		})->where(static function ($q) {
+			$q->where('e', '=', 'f')->orWhere('g', '=', 'h');
+		})->dd();
 
-		if (!$user) {
-			throw new ModelNotFoundException('User Not Found!');
-		}
+		dd($query);
 
-		return $user;
+		return User::whereUserUsername('rypuxewy')->get();
 	}
 
+	/**
+	 * @param string|int $user
+	 * @return User
+	 */
+	public function getUser(string|int $user): User
+	{
+		return User::active()->{is_string($user) ? 'whereUsername' : 'whereUserId'}($user)->findOrFail();
+	}
+
+	/**
+	 * @param CreateUserDTO $createUserDTO
+	 * @return User
+	 */
 	public function createUser(CreateUserDTO $createUserDTO): User
 	{
 		return User::create(attributes: $createUserDTO->toArray());
