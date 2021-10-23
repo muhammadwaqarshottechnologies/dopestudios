@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateUsersTable extends Migration
 {
@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('user_cover_picture')->nullable();
             $table->boolean('user_is_active')->default(true);
             $table->string('user_remember_token')->nullable();
-            $table->timestamp('user_created_at')->nullable();
-            $table->timestamp('user_updated_at')->nullable();
+            $table->timestamp('user_created_at')->useCurrent();
+            $table->timestamp('user_updated_at')->nullable()->useCurrentOnUpdate();
             $table->timestamp('user_deleted_at')->nullable();
         });
     }

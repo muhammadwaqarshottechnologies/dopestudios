@@ -2,28 +2,22 @@
 
 namespace App\Modules\User\Repositories;
 
+use App\Modules\Authorization\Services\AuthorizationService;
+use App\Modules\User\Models\User;
 use App\BaseClasses\BaseRepository;
 use App\Modules\User\DTOs\CreateUserDTO;
-use App\Modules\User\Models\User;
 use Illuminate\Database\Eloquent\Collection;
 
 class UserRepository extends BaseRepository
 {
-	/**
-	 * @return Collection
-	 */
-	public function getUserList(): Collection
+	public function __construct(private AuthorizationService $authorizationService)
 	{
-		$query = User::whereHas('t', static function ($q) {
-		    $q->where('a', '=', 'b')->orWhere('c', '=', 'd');
-		})->where(static function ($q) {
-		    $q->where('a', '=', 'b')->orWhere('c', '=', 'd');
-		})->where(static function ($q) {
-			$q->where('e', '=', 'f')->orWhere('g', '=', 'h');
-		})->dd();
+		//
+	}
 
-		dd($query);
-
+	public function getUserList(): Collection|array
+	{
+		$this->authorizationService->userHasPermissions(User::find(1));
 		return User::whereUserUsername('rypuxewy')->get();
 	}
 
