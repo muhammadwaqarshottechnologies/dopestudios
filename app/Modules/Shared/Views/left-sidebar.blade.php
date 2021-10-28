@@ -30,7 +30,7 @@
 				<li>
 					<a class="waves-effect" href="{{ route('music.index') }}">
 						<i class="fas fa-music"></i>
-						<span class="hide-menu">Music</span>
+						<span class="hide-menu">Music Dashboard</span>
 					</a>
 				</li>
 				<li>
@@ -39,11 +39,17 @@
 						<span class="hide-menu">Current Bidding</span>
 					</a>
 				</li>
+				<li>
+					<a class="waves-effect" href="{{ route('music.my-music') }}">
+						<i class="fas fa-book-open"></i>
+						<span class="hide-menu">My Music</span>
+					</a>
+				</li>
 			</ul>
 			<ul>
 				<li class="logoutButton">
 					<a class="waves-effect" href="javascript:void(0)" onclick="document.getElementById('logout-form').submit()">
-						<form method="POST" action="{{ route('authentication.logout.attempt') }}" id="logout-form">@csrf</form>
+						<form action="{{ route('authentication.logout.attempt') }}" id="logout-form" method="POST">@csrf</form>
 						<i class="fas fa-power-off"></i>
 						<span class="hide-menu">Logout</span>
 					</a>

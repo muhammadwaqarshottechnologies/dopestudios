@@ -1,6 +1,7 @@
 @extends('Shared::main')
 
 @section('content')
+	<!--suppress HtmlFormInputWithoutLabel -->
 	<div class="page-wrapper">
 		<div class="container-fluid">
 			<div class="row mt-5">
@@ -13,292 +14,41 @@
 									<table class="table stylish-table">
 										<thead>
 											<tr>
-												<th>STORE</th>
-												<th>PRODUCT</th>
-												<th>SIZE</th>
-												<th>PROFILE</th>
-												<th>PROXY</th>
-												<th>STATUS</th>
-												<th></th>
+												<th>ID</th>
+												<th>First Name</th>
+												<th>Last Name</th>
+												<th>Username</th>
+												<th>Email</th>
+												<th>Profile Picture</th>
+												<th>Active Status</th>
+												<th>Actions</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-success">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-success">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-success">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-success">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-success">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-success">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr class="active">
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-success">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-warning">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-warning ml-2 fas fa-lg fa-square"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-danger">8.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-warning">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-warning ml-2 fas fa-lg fa-square"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-warning">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-warning ml-2 fas fa-lg fa-square"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h6>Undefeated</h6>
-												</td>
-												<td>lorem ipsum</td>
-												<td>
-													<span class="label label-success">10.5</span>
-												</td>
-												<td>Main 34</td>
-												<td>April 21, 2021
-													<small class="text-muted">11:38:39 AM</small>
-												</td>
-												<td>
-													<h5 class="text-warning">lorem ipsum</h5>
-												</td>
-												<td>
-													<a href="javascript:void(0)">
-														<i class="text-warning ml-2 fas fa-lg fa-square"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
-													</a>
-													<a href="javascript:void(0)">
-														<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
-													</a>
-												</td>
-											</tr>
+											@foreach ($users as $user)
+												<tr>
+													<td>{{ $user->user_id }}</td>
+													<td>{{ $user->user_first_name }}</td>
+													<td>{{ $user->user_last_name }}</td>
+													<td>{{ $user->user_username }}</td>
+													<td>{{ $user->user_email }}</td>
+													<td>
+														<img alt="" src="{{ asset($user->user_profile_picture ?? 'images/1620974914.jpeg') }}" style="height: 50px; width: auto">
+													</td>
+													<td>
+														<input type="checkbox" @if ($user->user_is_active) checked @endif>
+													</td>
+													<td>
+														<a data-target="#exampleModalCenter" data-toggle="modal" href="javascript:void(0)">
+															<i class="text-white ml-2 fas fa-lg fa-pencil-alt"></i>
+															@include('Shared::modal')
+														</a>
+														<a href="javascript:void(0)">
+															<i class="text-danger ml-2 fas fa-lg fa-trash-alt"></i>
+														</a>
+													</td>
+												</tr>
+											@endforeach()
 										</tbody>
 									</table>
 								</div>

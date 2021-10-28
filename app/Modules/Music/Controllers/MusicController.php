@@ -7,8 +7,13 @@ use Illuminate\View\View;
 
 class MusicController extends BaseController
 {
-	public function index(): View
+	public function musicDashboard(): View
 	{
-		return view('Music::music');
+		return view('Music::music-dashboard');
+	}
+
+	public function myMusic(): View
+	{
+		return view('Music::music-library');
 	}
 }
